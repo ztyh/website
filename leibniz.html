@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111454513-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111454513-1');
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  },
+  CommonHTML: { matchFontHeight: false },
+  displayAlign: "left",
+  displayIndent: "2em"
+});
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<link rel="stylesheet" href="stylesheet.css" type="text/css">
+<link rel="icon" href="img/favicon.ico">
+<title>Leibniz rule</title>
+</head>
+<body>
+<h1>Leibniz rule</h1>
+The Leibniz integral rule says the following,
+\begin{align}
+&\frac{d}{dy} \left(\int_{a[y]}^{b[y]} f(x,y) dx \right)\\
+&=\int_{a[y]}^{b[y]} \frac{df(x,y)}{dy} dx\\
+&+f(b[y],y) b'[y]
+-f(a[y],y)a'[y].
+\end{align}
+There is geometric meaning to this.<br>
+We want to differentiate the following with \(t\) in quantile regression,
+\begin{align}
+&(\tau-1)\int_{-\infty}^u (y-u) dF_Y (y)\\
+&+\tau\int_u^{\infty} (y-u)dF_Y (y).
+\end{align}
+First there are the terms accounting for the change of the function being integrated,
+\[(\tau-1)\int_{-\infty}^u - dF_Y (y)+\tau\int_u^\infty - dF_Y (y).\]
+Then, there are the terms accounting for the changes at the bounds.<br>
+At \(u\) the function being integrated is zero so we ignore those terms.<br>
+So the end result is the equation above.<br>
+In quantile regression we would want to minimize this.<br>
+So let us simplify this and set it equal to zero,
+\[(1-\tau) F(u) -\tau [1-F(u)]=F(u)-\tau=0.\]
+That is, when \(u\) minimizes this function, it is the \(\tau\)'s percentile.<br>
+<br>
+<a href="index.html">To home</a>
+</body>
+</html>

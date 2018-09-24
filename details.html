@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111454513-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111454513-1');
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  },
+  displayAlign: "left",
+  displayIndent: "2em"
+});
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<link rel="stylesheet" href="stylesheet.css" type="text/css">
+<link rel="icon" href="img/favicon.ico">
+<title>Some details in programming</title>
+</head>
+<body>
+<h1>Some details in programming</h1>
+Flatten in numpy will take each row of the matrix and stack.<br>
+The vec operator in mathematics will take each column and stack.<br>
+The eig function in linalg will return the eigenvectors in the columns.<br>
+<br>
+Julia<br>
+repmat takes a matrix and repeats it vertically by the first argument,<br>
+repeats it horizantally by the second argument.<br>
+If you had fed a vector it will be treated as a $n$ by 1 matrix.<br>
+mean with argument 1 takes the column wise mean.<br>
+mean with argument 2 takes the row wise mean.<br>
+I guess the number signifies along which dimension the mean is taken.<br>
+Similarly, sum with argument 1 takes the column wise mean.<br>
+sum with argument 2 takes the row wise mean.<br>
+elementwise division of an $n$ by $m$ matrix by a $1$ by $m$ matrix,<br>
+i.e., a transposed vector, returned element wise division of each row<br>
+by the 1 by $m$ matrix.<br>
+reshape also conforms with the vec operation in mathematics.<br>
+If one is deforming a vector into a matrix ($m$ by $n$),<br>
+we take consecutive $m$ elements and place them as columns from left to right.<br>
+If one is deforming a matrix into a 1 by $m\cdot n$ transposed vector,<br>
+the columns of the matrix are taken, transposed, and laid from left to right.<br>
+If one is deforming a matrix into a $m\cdot n$ by 1 vector,<br>
+the columns of the matrix are taken, and laid from top to bottom.<br>
+<br>
+<a href="index.html">To home</a>
+</body>
+</html>

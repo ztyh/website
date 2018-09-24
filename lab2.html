@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111454513-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111454513-1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  },
+  displayAlign: "left",
+  displayIndent: "2em"
+});
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<link rel="stylesheet" href="stylesheet.css" type="text/css">
+<link rel="icon" href="img/favicon.ico">
+<title>Lab 2</title>
+</head>
+<body>
+<h1>Lab 2</h1>
+Due 2/23/2018 10:10am<br>
+<a href="https://www.kaggle.com/ztyh0121/lab-2-probability-distributions">example link</a><br>
+<br>
+Q1<br>
+Consider X~Bin(100,0.01).<br>
+Report P(X=7), P(X=8), P (X=9), try to use ONLY ONE line of command to return all these three values.<br>
+Use two different ways to find the probability $P(0\le X<5)$, be careful when treating “end points” 0 and 5.<br>
+For the parameters, n=100, p=0.01, np=1. It seems to satisfy the condition that the pmf of X can be approximated by a Poisson random variable Y with λ = np. Compute P (X = i), P (Y = i), i = 0, 1, 2, 3, 4 respectively and see whether the Poisson approximation performs well (You may use the method in
+part 1 to store the result in one vector for each of X and Y ).<br>
+<br>
+Q2<br>
+Work through code on finding QQ-plot of a sequence of numbers shown on kaggle (no need to submit).<br>
+Generate 10000 random numbers from N(50,4), store them as a vector. It is expected that the sample mean of this vector should be close to the population mean 50. Verify this.<br>
+Suppose X~NB(3,0.8). More specificly, let X be the total numbers needed to achieve 3rd success in a sequence of independent repeated Bernoulli trials with success probability 0.8. Report the probability that P (5 < X ≤ 10).<br>
+<br>
+Q3<br>
+Simulate random samples from the following distributions:<br>
+Bernoulli(0.5) (so that μ = 0.5 and $\sigma^2$ = 0.25). (Hint: You can use rbinom to
+generate Bernoulli random numbers.)<br>
+Uniform(0, 1) (so that μ = 0.5 and $\sigma^2$ = 1/12).<br>
+Possion(1) (so that μ = 1 and $\sigma^2$ = 1).<br>
+For each case, set the number of simulations N to be 1000 and for each simulation, generate n = 2000 random numbers. Report 3 pieces of code, 3 Q-Q plots and your
+conclusion. You only need to slightly modify the demo code to get the right answer.<br>
+<br>
+<a href="index.html">To home</a>
+</body>
+</html>

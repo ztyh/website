@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111454513-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111454513-1');
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  },
+  displayAlign: "left",
+  displayIndent: "2em"
+});
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<link rel="stylesheet" href="stylesheet.css" type="text/css">
+<link rel="icon" href="img/favicon.ico">
+<title>Expected value of the max</title>
+</head>
+<body>
+<h1>Expected value of the max</h1>
+We have two fair die.<br>
+The expected value of the maximum of the two would be,<br>
+\begin{align*}
+E[\max(X,Y)]&=\sum_{k=1}^6 P[\max(X,Y)\ge k]\\
+&=\sum_{k=1}^6 1-P[\max(X,Y)< k]\\
+&=1-0+\sum_{k=2}^6 1-\frac{(k-1)^2}{36}\\
+&=6-\sum_{k=1}^5 \frac{k^2}{36}\\
+&=6-\frac{5\cdot 6\cdot 11}{6\cdot 36}\\
+&=\frac{216}{36}-\frac{55}{36}\\
+&=\frac{161}{36}.
+\end{align*}
+In above, I used
+\begin{align*}
+\sum_{k=1}^n \frac{n(n+1)(2n+1)}{6},
+\end{align*}
+Another way to calculate this is by writing out a 6 by 6 table.
+$$
+    \begin{matrix}
+      & 1 & 2 & 3 & 4 & 5 & 6\\
+    1 & 1 & 2 & 3 & 4 & 5 & 6\\
+    2 & 2 & 2 & 3 & 4 & 5 & 6\\
+    3 & 3 & 3 & 3 & 4 & 5 & 6\\
+    4 & 4 & 4 & 4 & 4 & 5 & 6\\
+    5 & 5 & 5 & 5 & 5 & 5 & 6\\
+    6 & 6 & 6 & 6 & 6 & 6 & 6
+    \end{matrix}
+$$
+Every new layer is obtained by pushing the previous layer toward the bottom right. You need to add the two end places. And so we have the following.
+\begin{align*}
+\sum_{k=1}^6 \frac{k (2k-1)}{36}&=\sum_{k=1}^6 \frac{2k^2}{36}-\sum_{k=1}^6 \frac{k}{36}\\
+&=\frac{2\cdot6\cdot7\cdot 13}{6\cdot 36}-\frac{21}{36}\\
+&=\frac{182-21}{36}=\frac{161}{36}
+\end{align*}
+<br>
+<a href="index.html">To home</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    font-size: 100%;
+	color: #FFFFFF;
+	background: #333333;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+a:link {
+	COLOR: yellow;
+}
+a:visited {
+	COLOR: orange;
+}
+a:hover {
+	COLOR: #FF0000;
+}
+a:active {
+	COLOR: #00FF00;
+}

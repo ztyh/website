@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111454513-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111454513-1');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  },
+  displayAlign: "left",
+  displayIndent: "2em"
+});
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<link rel="stylesheet" href="stylesheet.css" type="text/css">
+<link rel="icon" href="img/favicon.ico">
+<title>Lab 5</title>
+</head>
+<body>
+<h1>Lab 5</h1>
+No submission required.<br>
+<a href="https://www.kaggle.com/ztyh0121/lab5-correlation-clt-matrix-manipulation">example link</a><br>
+<br>
+Q1<br>
+Try to calculate pearson correlation and spearman rank correlation between different stocks. Try to find a pair that has high correlation and a pair that has low correlation. Make a new vector where the value is the equally weighted sum of the two stocks. What do you notice about the variance? Try to use a common stock in each pair. The variance of the former would most likely be larger than the variance of the latter but this is not guaranteed.<br>
+<br>
+Q2<br>
+A linear regression can be fit by $(X^t X)^{-1} X^t Y$.<br>
+Here $Y$ is the response stacked in a tall vector ($n$ by 1).<br>
+$X$ is the predictors laid flat with 1 in the beginning and stacked $n$ times for the number of samples we have ($n$ by $d+1$).<br>
+So the dimensions of this multiplication is $[(d+1\ \text{by}\ n)]\times(n\ \text{by}\ d+1)]^{-1}\times(d+1\ \text{by}\ n)\times (n\ \text{by}\ 1)=(d+1\ \text{by}\ d+1)\times (d+1\ \text{by}\ 1)=(d+1\ \text{by}\ 1)$. For a data of your choice in kaggle, obtain the estimate of the coefficients by constructing the above matrix calculation.<br>
+<br>
+<a href="index.html">To home</a>
+</body>
+</html>
